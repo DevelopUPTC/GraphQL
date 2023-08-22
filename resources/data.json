@@ -1,0 +1,57 @@
+{
+    "books" : [
+        {
+            "id":1,
+            "title":"El Alquimista",
+            "Author":{
+                "name":"Paulo Cohelo",
+                "country":"Brasil"
+            },
+            "pages":432,
+            "genre":"Novela",
+            "year":2007
+        },
+        {
+            "id":2,
+            "title":"Cien Años de Soledad",
+            "Author":{
+                "name":"Gabriel García Márquez",
+                "country":"Colombia"
+            },
+            "pages":535,
+            "genre":"Novela",   
+            "year":1983
+        },
+        {
+            "id":3,
+            "title":"Juego de Tronos",
+            "Author":{
+                "name":"George R. R. Martin",
+                "country":"EEUU"
+            },
+            "pages":732,
+            "genre":"Medieval",
+            "year":1996   
+        },
+        {
+            "id":4,
+            "title":"Choque de Reyes",
+            "Author":{
+                "name":"George R. R. Martin",
+                "country":"EEUU"
+            },
+            "pages":812,
+            "genre":"Medieval"   
+        },
+        {
+            "id":5,
+            "title":"Viaje al Centro de la Tierra",
+            "Author":{
+                "name":"Julio Verne",
+                "country":"Francia"
+            },
+            "pages":623,
+            "genre":"Ficción"   
+        }
+    ]
+}
