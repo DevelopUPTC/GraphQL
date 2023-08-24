@@ -27,6 +27,10 @@ const schema = buildSchema(`
         pages : Int
         genre : String
         year : Int
+    },
+
+    type Mutation{
+        updateBook(id:Int!,title:String,pages:Int!,year:Int,genre:String):Book
     }
 `)
 
@@ -43,10 +47,25 @@ let findByGenre = (args)=>{
     return books
 }
 
+let updateBook = ({id,title,year,pages,genre})=>{
+    books.map( book => {
+        if( book.id == id ){
+            book.title = title
+            book.year = year
+            book.pages = pages
+            book.genre = genre
+
+            return book
+        }
+    })
+    return books.find(book=>book.id == id)    
+}
+
 const root = {
     findAll : ()=> books, 
     findById : (args)=>books.find(book => book.id == args.id ),
-    findByGenre : findByGenre
+    findByGenre : findByGenre,
+    updateBook : updateBook    
 }
 
 app.use('/graphql',graphqlHTTP({
